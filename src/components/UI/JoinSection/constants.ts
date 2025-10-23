@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 import gopala_vinjamuri from '../../../../public/images/vinjumuri_crop.png';
 import bharathwaj_ramanathan from '../../../../public/images/bharath.png';
-import varun_aiyaswamy from '../../../../public/images/Varun.png';
+import varun_aiyaswamy from '../../../../public/images/varun.png';
 
 export type Props = {
   testimony: string;
