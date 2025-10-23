@@ -64,14 +64,16 @@ const Preloader = ({
         <Inner>
           <Image ref={imageRef} src={ic_import} alt="import icon" />
           <div>
-            {word.map((t, i) => (
-              <div
-                key={i}
-                ref={(element) => (spans.current[i] = element)} // Assign ref to each span
-              >
-                {t}
-              </div>
-            ))}
+{word.map((t, i) => (
+  <div
+    key={i}
+    ref={(element) => {
+      spans.current[i] = element;
+    }} // ✅ fixed: explicit block, returns void
+  >
+    {t}
+  </div>
+))}
           </div>
         </Inner>
       </Wrapper>
